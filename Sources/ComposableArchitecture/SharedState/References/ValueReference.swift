@@ -214,7 +214,7 @@ final class ValueReference<Value, Persistence: PersistenceReaderKey<Value>>: Ref
   }
   #if canImport(Combine)
     var publisher: AnyPublisher<Value, Never> {
-      self.subject.dropFirst().eraseToAnyPublisher()
+      self.subject.eraseToAnyPublisher()
     }
   #endif
   init(
